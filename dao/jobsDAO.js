@@ -33,7 +33,7 @@ export default class JobsDAO {
         }
         catch(e){
             console.error(`Unable to issue find command, ${e}`);
-            return jobsList = [];
+            return [];
         }
     }
 

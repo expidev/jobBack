@@ -32,7 +32,8 @@ export default class resumeDAO {
         }
         catch(e){
             console.error(`Unable to issue find command, ${e}`);
-            return resumeList = [];
+            const resumeList = [];
+            return resumeList;
         }
     }
 
