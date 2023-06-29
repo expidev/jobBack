@@ -7,6 +7,7 @@ const app = express();
 
 // avoid cors policy
 app.use(cors());
+app.use(express.urlencoded({ extended: true }))
 app.use(express.json());
 
 app.use("/api/v1/jobs", jobs);
