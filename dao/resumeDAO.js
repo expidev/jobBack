@@ -61,8 +61,8 @@ export default class resumeDAO {
 
     static async updateResume(id, data) {
         try{
-            const updatedResponse = await resume.updateOne(
-                {'resume_id': id}, {$set: {'content': data}}
+            const updatedResponse = await resume.replaceOne(
+                {'resume_id': id}, {'content': data}
             );
             return updatedResponse;
         }
