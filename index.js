@@ -15,6 +15,7 @@ async function main() {
 
     try {
         await client.connect();
+        console.log("connected to database")
         await JobsDAO.injectDB(client);
         await resumeDAO.injectDB(client);
         app.listen(port, () => {
